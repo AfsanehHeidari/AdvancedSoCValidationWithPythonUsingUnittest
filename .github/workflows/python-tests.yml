@@ -2,9 +2,9 @@ name: Python SoC CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-test:
@@ -28,7 +28,3 @@ jobs:
     - name: Run SoC tests (unittest)
       run: |
         python -m unittest discover -s . -p "test_soc*.py" -v
-
-    # Optional: if using Pytest
-    #- name: Run SoC tests (pytest)
-    #  run: pytest -v
